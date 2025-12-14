@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+  color: #007bff;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.nav-btn {
+  background: #04b97f;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: 0.3s ease;
+}
+.nav-btn:hover { background: #03996c; }
+
+/* Content */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  gap: 50px;
+}
+
+.text {
+  max-width: 55%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.text.show { opacity: 1; transform: translateY(0); }
+
+.text h2 {
+  color: #007bff;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.text h1 {
+  font-size: 3.4rem;
+  margin-bottom: 20px;
+  color: #222;
+  font-weight: 700;
+}
+
+.text p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.members h3 {
+  color: #007bff;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.members ul {
+  list-style: none;
+}
+
+.members li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.members li::before {
+  content: "• ";
+  color: #04b97f;
+}
+
+/* Image */
+.image {
+  max-width: 40%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.image.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .text, .image {
+    max-width: 100%;
+  }
+  .text h1 {
+    font-size: 2.5rem;
+  }
+  .text h2 {
+    font-size: 1.2rem;
+  }
+  .text p {
+    font-size: 1rem;
+  }
+  .members li {
+    font-size: 1rem;
+  }
+  .image img {
+    width: 80%;
+  }
+}
